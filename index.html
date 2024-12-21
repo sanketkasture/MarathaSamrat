@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Maratha</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="./css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/aos.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/jquery-3.6.0.min.js"></script>
+</head>
+
+<style>
+  section#gallery .row.g-3 {
+    margin-bottom: 20px;
+  }
+
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .gallery-item:hover img {
+    transform: scale(1.1);
+  }
+
+  .gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .gallery-item:hover .gallery-caption {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<body style="height:1500px">
+  <section id="header">
+    <nav class="navbar navbar-expand-md fixed-top bg-white">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><img src="./images/Maratha-Empire.png" height="70px"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse flex-row-reverse" id="navbarCollapse">
+          <ul class="navbar-nav mb-2 mb-md-0 align-items-center">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about-us.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="rooms.html">Rooms</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="experience.html">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact-us.html">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-primary primaryBtn" href="rooms.html">Book Now</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <section id="ctmcarousel">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./images/Banner1.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h2>a weekend getaway designed for families</h2>
+            <a class="btn btn-primary primaryBtn" href="rooms.html">Book Now</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./images/Banner2.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h2>unwind in the serene beauty of nature</h2>
+            <a class="btn btn-primary primaryBtn" href="rooms.html">Book Now</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./images/Banner3.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h2>nestled among lush hills with a lakeside view</h2>
+            <a class="btn btn-primary primaryBtn" href="rooms.html">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <section id="firstSection">
+    <div class="container ctm-pad-80 w-75">
+      <h2 data-aos="fade-down" data-aos-duration="1000">Maratha Empire</h2>
+      <h3 data-aos="fade-in" data-aos-duration="1000"> Where Tradition Meets Nature</h3>
+      <p data-aos="fade-in" data-aos-duration="1500">Welcome to Maratha Empire Resort, a weekend getaway designed for
+        families to unwind in the serene beauty of
+        nature. Nestled among lush hills with a lakeside view, our resort offers a peaceful retreat for those looking to
+        escape the stress of everyday life. Surrounded by wildlife and natural beauty, Maratha Empire Resort is where
+        tradition and modern comfort come together. </p>
+      <a class="btn btn-primary primaryBtn mt-3" href="rooms.html" data-aos="fade-in" data-aos-duration="1000">Book
+        Now</a>
+    </div>
+  </section>
+
+  <section id="secSection">
+    <div class="container pad-80">
+      <h2 class="text-center w-75 mx-auto" data-aos="fade-down" data-aos-duration="1000">A weekend retreat surrounded by
+        hills, wildlife, and the essence of
+        Maharashtrian heritage</h2>
+      <div class="row row-cols-1 row-cols-md-3 g-4 mt-5 w-75 mx-auto roomSection">
+        <div class="col" data-aos="fade-in" data-aos-duration="500">
+          <div class="card border-0">
+            <img src="./images/room-1.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Surrounded by Nature’s Serenity</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col" data-aos="fade-in" data-aos-duration="1000">
+          <div class="card border-0">
+            <img src="./images/room-2.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Luxury in the Heart of Tradition</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col" data-aos="fade-in" data-aos-duration="1500">
+          <div class="card border-0">
+            <img src="./images/room-3.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Unique Cultural Experiences</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ThrdSection">
+    <div class="container text-center w-75 mx-auto">
+      <small data-aos="fade-in" data-aos-duration="1500">OUR ROOMS</small>
+      <h2 data-aos="fade-down" data-aos-duration="1000">Rest & Rejuvenate in Nature's Embrace</h2>
+      <p class="mx-auto w-75" data-aos="fade-in" data-aos-duration="1000">Experience comfort and heritage in the heart
+        of nature. Our rooms are thoughtfully
+        designed to provide a peaceful and relaxing stay, with each offering scenic views and a touch of local
+        tradition.</p>
+
+      <div class="row row-cols-1 row-cols-md-3 g-4 mt-2 roomDetails">
+        <div class="col" data-aos="fade-in" data-aos-duration="500">
+          <div class="card">
+            <img src="./images/room-4.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <small>LUXURY</small>
+              <h5 class="card-title">Malhar Suite</h5>
+              <p>450 sq. ft. including a private balcony</p>
+              <a href="#" class="internalLink">Know More <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" class="feather feather-arrow-right">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg></a>
+            </div>
+          </div>
+        </div>
+        <div class="col" data-aos="fade-in" data-aos-duration="1000">
+          <div class="card">
+            <img src="./images/room-5.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <small>PREMIUM</small>
+              <h5 class="card-title">Rajgad</h5>
+              <p>400 sq. ft. including a private balcony</p>
+              <a href="#" class="internalLink">Know More <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" class="feather feather-arrow-right">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg></a>
+            </div>
+          </div>
+        </div>
+        <div class="col" data-aos="fade-in" data-aos-duration="1500">
+          <div class="card">
+            <img src="./images/room-6.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <small>STANDARD</small>
+              <h5 class="card-title">Kille Purandar</h5>
+              <p>300 sq. ft. including a private balcony</p>
+              <a href="#" class="internalLink">Know More <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" class="feather feather-arrow-right">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg></a>
+            </div>
+          </div>
+        </div>
+        <div class="col" data-aos="fade-in" data-aos-duration="2000">
+          <div class="card">
+            <img src="./images/room-4.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <small>LUXURY</small>
+              <h5 class="card-title">Malhar Suite</h5>
+              <p>450 sq. ft. including a private balcony</p>
+              <a href="#" class="internalLink">Know More <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" class="feather feather-arrow-right">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg></a>
+            </div>
+          </div>
+        </div>
+        <div class="col" data-aos="fade-in" data-aos-duration="2500">
+          <div class="card">
+            <img src="./images/room-5.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <small>PREMIUM</small>
+              <h5 class="card-title">Rajgad</h5>
+              <p>400 sq. ft. including a private balcony</p>
+              <a href="#" class="internalLink">Know More <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" class="feather feather-arrow-right">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg></a>
+            </div>
+          </div>
+        </div>
+        <div class="col" data-aos="fade-in" data-aos-duration="3000">
+          <div class="card">
+            <img src="./images/room-6.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <small>STANDARD</small>
+              <h5 class="card-title">Kille Purandar</h5>
+              <p>300 sq. ft. including a private balcony</p>
+              <a href="#" class="internalLink">Know More <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" class="feather feather-arrow-right">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="facilities">
+    <div class="container pad-80 text-center">
+      <h2 data-aos="fade-down" data-aos-duration="1000">Facilities</h2>
+      <p class="w-50 text-center mx-auto pb-3" data-aos="fade-in" data-aos-duration="1500">Discover the unique blend of
+        luxury, tradition, and nature with our carefully
+        curated facilities. Whether you're seeking relaxation or recreation, our resort offers something for everyone.
+      </p>
+
+      <div class="card-group first">
+        <div class="card border-0" data-aos="fade-in" data-aos-duration="500">
+          <img src="./images/facility-1.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Pure- Veg Restaurant</h5>
+          </div>
+        </div>
+
+        <div class="card border-0" data-aos="fade-in" data-aos-duration="1000">
+          <img src="./images/facility-2.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Play Area for Kids</h5>
+          </div>
+        </div>
+
+        <div class="card border-0" data-aos="fade-in" data-aos-duration="1500">
+          <img src="./images/facility-3.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Swimming Pool with Jacuzzi</h5>
+          </div>
+        </div>
+
+        <div class="card border-0" data-aos="fade-in" data-aos-duration="2000">
+          <img src="./images/facility-4.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Walking Track</h5>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="card-group second">
+        <div class="card border-0" data-aos="fade-in" data-aos-duration="500">
+          <img src="./images/facility-5.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Pure- Veg Restaurant</h5>
+          </div>
+        </div>
+
+        <div class="card border-0" data-aos="fade-in" data-aos-duration="1000">
+          <img src="./images/facility-6.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Play Area for Kids</h5>
+          </div>
+        </div>
+
+        <div class="card border-0" data-aos="fade-in" data-aos-duration="1500">
+          <img src="./images/facility-7.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Swimming Pool with Jacuzzi</h5>
+          </div>
+        </div>
+
+        <div class="card border-0" data-aos="fade-in" data-aos-duration="2000">
+          <img src="./images/facility-8.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Bullock Cart & Tractor Rides</h5>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="activiitiesSection">
+    <div class="container text-center pad-80">
+      <h2 data-aos="fade-down" data-aos-duration="1000">Activities & Experiences</h2>
+      <p class="w-50 mx-auto" data-aos="fade-in" data-aos-duration="1000"> Discover a range of activities designed to
+        immerse you in the beauty and culture of Maratha Empire Resort. From relaxing nature walks to engaging in
+        traditional Maharashtrian games, there's something for everyone to enjoy.</p>
+    </div>
+  </section>
+
+  <section id="whyChooesSec">
+    <div class="container pad-80">
+      <div class="row align-items-center">
+        <div class="col-lg-4 whyLeftSec">
+          <h6 data-aos="fade-down" data-aos-duration="1000">Why Choose Us?</h6>
+          <h2 data-aos="fade-in" data-aos-duration="1000">Heritage, Nature, and Relaxation Await</h2>
+          <a class="btn btn-primary primaryBtn" data-aos="fade-in" data-aos-duration="1000"
+            href="experience.html">Explore More</a>
+        </div>
+
+        <div class="col-lg-8 whyRightSec">
+          <div class="card mb-3 border-0 ctmBorder1" data-aos="fade-in" data-aos-duration="500">
+            <div class="row g-0">
+              <div class="col-md-3">
+                <img src="./images/why-1.png" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Heritage-Inspired Stay</h5>
+                  <p class="card-text">Experience Maratha Empire history and architecture with modern comforts.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-3 border-0 ctmBorder2" data-aos="fade-in" data-aos-duration="1000">
+            <div class="row g-0 ">
+              <div class="col-md-3">
+                <img src="./images/why-2.png" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Nature at Your Doorstep</h5>
+                  <p class="card-text">A peaceful retreat amidst hills, lakes, and wildlife.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-3 border-0 ctmBorder3" data-aos="fade-in" data-aos-duration="1500">
+            <div class="row g-0">
+              <div class="col-md-3">
+                <img src="./images/why-3.png" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Authentic Experience</h5>
+                  <p class="card-text">Enjoy Maharashtrian hospitality, organic food, and traditional activities.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-3 border-0 ctmBorder4" data-aos="fade-in" data-aos-duration="2000">
+            <div class="row g-0">
+              <div class="col-md-3">
+                <img src="./images/why-4.png" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Tailored for Relaxation</h5>
+                  <p class="card-text">Relax in luxury or explore nature, ensuring a rejuvenating stay.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="container pad-80">
+      <h2 class="text-center mb-4" data-aos="fade-down" data-aos-duration="1000">Gallery</h2>
+      <div class="row g-3" data-aos="fade-in" data-aos-duration="1000">
+        <!-- Gallery Items -->
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+            data-src="https://via.placeholder.com/300">
+            <img src="./images/gallery1.png" class="img-fluid" alt="Image 1">
+            <div class="gallery-caption">Image 1 Caption</div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+            data-src="https://via.placeholder.com/300">
+            <img src="./images/gallery2.jpg" class="img-fluid" alt="Image 2">
+            <div class="gallery-caption">Image 2 Caption</div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+            data-src="https://via.placeholder.com/300">
+            <img src="./images/gallery3.jpg" class="img-fluid" alt="Image 3">
+            <div class="gallery-caption">Image 3 Caption</div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+            data-src="https://via.placeholder.com/300">
+            <img src="./images/gallery4.jpg" class="img-fluid" alt="Image 4">
+            <div class="gallery-caption">Image 4 Caption</div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+            data-src="https://via.placeholder.com/300">
+            <img src="./images/gallery5.jpg" class="img-fluid" alt="Image 5">
+            <div class="gallery-caption">Image 5 Caption</div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+            data-src="https://via.placeholder.com/300">
+            <img src="./images/gallery6.png" class="img-fluid" alt="Image 5">
+            <div class="gallery-caption">Image 5 Caption</div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row g-3">
+        <!-- Gallery Items -->
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+            data-src="https://via.placeholder.com/300">
+            <img src="./images/gallery3.jpg" class="img-fluid" alt="Image 1">
+            <div class="gallery-caption">Image 1 Caption</div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+            data-src="https://via.placeholder.com/300">
+            <img src="./images/gallery5.jpg" class="img-fluid" alt="Image 2">
+            <div class="gallery-caption">Image 2 Caption</div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+            data-src="https://via.placeholder.com/300">
+            <img src="./images/gallery1.png" class="img-fluid" alt="Image 3">
+            <div class="gallery-caption">Image 3 Caption</div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+            data-src="https://via.placeholder.com/300">
+            <img src="./images/gallery2.jpg" class="img-fluid" alt="Image 4">
+            <div class="gallery-caption">Image 4 Caption</div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+            data-src="https://via.placeholder.com/300">
+            <img src="./images/gallery6.png" class="img-fluid" alt="Image 5">
+            <div class="gallery-caption">Image 5 Caption</div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+            data-src="https://via.placeholder.com/300">
+            <img src="./images/gallery4.jpg" class="img-fluid" alt="Image 5">
+            <div class="gallery-caption">Image 5 Caption</div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row g-3">
+        <!-- Gallery Items -->
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+            data-src="https://via.placeholder.com/300">
+            <img src="./images/gallery1.png" class="img-fluid" alt="Image 1">
+            <div class="gallery-caption">Image 1 Caption</div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+            data-src="https://via.placeholder.com/300">
+            <img src="./images/gallery2.jpg" class="img-fluid" alt="Image 2">
+            <div class="gallery-caption">Image 2 Caption</div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+            data-src="https://via.placeholder.com/300">
+            <img src="./images/gallery3.jpg" class="img-fluid" alt="Image 3">
+            <div class="gallery-caption">Image 3 Caption</div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+            data-src="https://via.placeholder.com/300">
+            <img src="./images/gallery4.jpg" class="img-fluid" alt="Image 4">
+            <div class="gallery-caption">Image 4 Caption</div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+            data-src="https://via.placeholder.com/300">
+            <img src="./images/gallery5.jpg" class="img-fluid" alt="Image 5">
+            <div class="gallery-caption">Image 5 Caption</div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+            data-src="https://via.placeholder.com/300">
+            <img src="./images/gallery6.png" class="img-fluid" alt="Image 5">
+            <div class="gallery-caption">Image 5 Caption</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="imageModalLabel">Expanded Image</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img id="modalImage" src="" class="img-fluid rounded" alt="Expanded View">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="footerCTA">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6 footerCTALeft" data-aos="fade-in" data-aos-duration="500">
+
+        </div>
+
+        <div class="col-lg-6 footerCTARight">
+          <h2 data-aos="fade-down" data-aos-duration="1000">Book your stay today and experience the perfect blend of
+            heritage, nature, and luxury at Maratha Empire Resort!</h2>
+          <a href="rooms.html" class="btn btn-primary primaryBtn" data-aos="fade-in" data-aos-duration="1000">Book Your
+            Stay Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="FooterSection">
+    <div class="container pad-80">
+      <div class="row">
+        <div class="col-md-3 abtCompany" data-aos="fade-in" data-aos-duration="500">
+          <img src="./images/Maratha-Empire.png">
+          <div class="socialMedia">
+            <ul>
+              <li><img src="./images/facebook.png" class="SocialIcon"></li>
+              <li><img src="./images/instagram.png" class="SocialIcon"></li>
+              <li><img src="./images/twitter.png" class="SocialIcon"></li>
+              <li><img src="./images/linkedin.png" class="SocialIcon"></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-2 footerOne" data-aos="fade-in" data-aos-duration="1000">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="rooms.html">Rooms</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 footerTwo" data-aos="fade-in" data-aos-duration="1500">
+          <h3>Contact Details</h3>
+          <div class="contactDetails d-flex ">
+            <img src="./images/map.png" class="SocialIcon">
+            <div class="details">
+              <p>Maratha Samrat, Jejuri, Pune -411021</p>
+            </div>
+          </div>
+
+          <div class="contactDetails d-flex ">
+            <img src="./images/phone.png" class="SocialIcon">
+            <div class="details">
+              <p>+91 9822 012 762</p>
+            </div>
+          </div>
+
+          <div class="contactDetails d-flex ">
+            <img src="./images/email.png" class="SocialIcon">
+            <div class="details">
+              <p>marathasamrat@gmail.com</p>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="col-md-4 footerThree" data-aos="fade-in" data-aos-duration="2000">
+          <h3>Visit Our Location</h3>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115069.14634302017!2d73.78056543154413!3d18.524598599502376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e1!3m2!1sen!2sin!4v1732174093463!5m2!1sen!2sin"
+            width="100%" height="150" style="border:1px solid #ddd;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // JavaScript to handle dynamic image updates in modal
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const modalImage = document.getElementById('modalImage');
+
+    galleryItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const imageSrc = item.getAttribute('data-src');
+        modalImage.src = imageSrc;
+      });
+    });
+  </script>
+  <script src="./js/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking Payment</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .primaryBtn { width: 100%; }
+        .roomInfo img { border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container PayementDetailsPage">
+        <div class="row">
+            <!-- Booking Form -->
+            <div class="col-lg-8" style="padding-right:100px;">
+                <div class="form payForm">
+                    <h2 class="mb-4">Book My Stay</h2>
+                    <div class="row mb-3">
+                        <div class="col-lg-6">
+                            <label>Check In</label>
+                            <input type="date" class="form-control" id="checkInDate" placeholder="Check-in">
+                        </div>
+                        <div class="col-lg-6">
+                            <label>Check Out</label>
+                            <input type="date" class="form-control" id="checkOutDate" placeholder="Check-out">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-lg-6">
+                            <label>Number of People</label>
+                            <select class="form-select" id="numPeople">
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-6">
+                            <label>Select Room</label>
+                            <select class="form-select" id="roomType">
+                                <option value="Malhar Suite">Malhar Suite</option>
+                                <option value="Raigad Retreat">Raigad Retreat</option>
+                                <option value="Rajgad">Rajgad</option>
+                                <option value="Pratapgad">Pratapgad</option>
+                                <option value="Kille Purandar">Kille Purandar</option>
+                                <option value="Sinhagad">Sinhagad</option>
+                            </select>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row mb-3">
+                        <div class="col-lg-6">
+                            <label>Name</label>
+                            <input type="text" class="form-control" id="guestName" placeholder="Enter name">
+                        </div>
+                        <div class="col-lg-6">
+                            <label>Email</label>
+                            <input type="email" class="form-control" id="guestEmail" placeholder="Enter email">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-lg-6">
+                            <label>Mobile Number</label>
+                            <input type="tel" class="form-control" id="guestPhone" placeholder="Enter mobile number">
+                        </div>
+                        <div class="col-lg-6">
+                            <label>City</label>
+                            <input type="text" class="form-control" id="guestCity" placeholder="Enter city">
+                        </div>
+                    </div>
+                    <button type="button" id="submitDetails" class="btn btn-primary primaryBtn mt-2">Submit Details</button>
+                </div>
+            </div>
+
+            <!-- Payment Section -->
+            <div class="col-lg-4 PaymentSection">
+                <div class="roomInfo d-flex justify-content-between align-items-end">
+                    <img id="roomImage" src="./images/Malhar-Suite-1.webp" class="w-50" alt="Room Image">
+                    <div class="roomInside">
+                        <small id="roomCategory">Luxury</small>
+                        <h6 id="roomName">Malhar Suite</h6>
+                        <p id="roomDescription">450 sq. ft. including a private balcony</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="checkinoutdetails d-flex justify-content-between">
+                    <div class="checkIn">
+                        <small>Check-In</small>
+                        <h6 id="displayCheckIn">N/A</h6>
+                        <p>13:00 PM</p>
+                    </div>
+                    <div class="checkIn">
+                        <small>Check-Out</small>
+                        <h6 id="displayCheckOut">N/A</h6>
+                        <p>10:00 AM</p>
+                    </div>
+                </div>
+                <hr>
+                <h5>Price Details</h5>
+                <div class="d-flex justify-content-between mb-2">
+                    <p>Base Fare</p>
+                    <p id="baseFare">5040</p>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                    <p>Discount</p>
+                    <p id="discount">0</p>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                    <p>Taxes</p>
+                    <p id="taxes">500</p>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                    <p>Service Fee</p>
+                    <p id="serviceFee">500</p>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between">
+                    <h6>Total</h6>
+                    <h6 id="totalPrice">7040</h6>
+                </div>
+                <button class="btn btn-primary primaryBtn mt-3" id="payNowBtn">Pay Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script>
+        // Dynamic Data Update
+        document.getElementById("submitDetails").addEventListener("click", function () {
+            const checkIn = document.getElementById("checkInDate").value;
+            const checkOut = document.getElementById("checkOutDate").value;
+            const roomType = document.getElementById("roomType").value;
+
+            // Update details in the Payment Section
+            document.getElementById("displayCheckIn").textContent = checkIn || "N/A";
+            document.getElementById("displayCheckOut").textContent = checkOut || "N/A";
+            document.getElementById("roomName").textContent = roomType;
+
+            // Adjust pricing dynamically if needed (example logic)
+            const baseFare = roomType === "Malhar Suite" ? 5040 : 4000;
+            document.getElementById("baseFare").textContent = baseFare;
+            const total = baseFare + 500 + 500; // Add taxes and service fee
+            document.getElementById("totalPrice").textContent = total;
+        });
+    </script>
+</body>
+</html>

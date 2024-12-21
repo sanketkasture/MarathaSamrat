@@ -1,0 +1,1068 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Spacing between images */
+  }
+  .gallery img {
+    width: calc(20% - 15px); /* 5 images per row */
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  .gallery img:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+  }
+  @media (max-width: 768px) {
+    .gallery img {
+      width: calc(33.33% - 10px); /* 3 images per row for smaller screens */
+    }
+  }
+  @media (max-width: 576px) {
+    .gallery img {
+      width: calc(50% - 10px); /* 2 images per row for extra small screens */
+    }
+  }
+
+
+  .thumbnail-images img {
+    cursor: pointer;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    border: 2px solid transparent;
+}
+
+.thumbnail-images img:hover,
+.thumbnail-images img.active {
+    border: 2px solid #ff6600;
+}
+
+div#mainImageSlider img.d-block.w-100 {
+    height: 522px;
+    object-fit: cover;
+}
+
+.fixed {
+  position: fixed;
+  z-index: 1;
+  top: 20%;
+  width: 312px;
+  left: 6.5%;
+
+      }
+
+
+
+
+
+
+body {
+    font-family: "Poppins", system-ui;
+    font-size: 14px;
+    color: #3b3b3b;
+    font-weight: 500;
+}
+
+p{
+    margin-bottom: 0;
+}
+
+h1, h2{
+    font-weight: 600;
+    color:#003A21 ;
+}
+
+.pad-80{
+    padding: 100px 0;
+}
+
+.pl-5{
+    padding-left: 30px;
+}
+
+section#header {
+    height: 95px;
+}
+
+section#header li.nav-item {
+    margin-left: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+nav.navbar.navbar-expand-md.fixed-top.bg-white {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.primaryBtn, .secondary {
+    background: #ff6600 !important;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 20px;
+    border: transparent;
+    font-size: 14px;
+    min-width: 120px;
+    border-radius: 50px;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+.btnGroups.pt-5.mx-auto {
+  margin: 0 auto;
+  display: table;
+}
+
+.secondaryBtn {
+  height: 45px;
+  line-height: 45px;
+  padding: 0 20px;
+  border: transparent;
+  font-size: 14px;
+  min-width: 120px;
+  border-radius: 50px;
+  transition: 0.3s;
+  background: #808080;
+  text-transform: uppercase;
+}
+
+#footerCTA .btn.btn-primary.primaryBtn {
+    background: #fff !important;
+}
+
+
+.primaryBtn:hover{
+    background: #e45b00;
+}
+
+.carousel-caption{
+    bottom: 10rem;
+}
+
+.carousel-item h2 {
+    margin-bottom: 20px;
+    font-size: 45px;
+    font-weight: 700;
+    color: #fff;
+}
+
+#firstSection{
+    background-image: url(../images/homePage-Sec1.png);
+    background-size: cover;
+}
+
+#firstSection {
+    background-image: url(../images/homePage-Sec1.png);
+    background-size: cover;
+    height: 600px;
+    background-position: center;
+}
+
+section#secSection {
+    background-image: url(../images/rooms-bg.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.ctm-pad-80{
+    padding: 90px 0 50px;
+}
+
+.roomSection .card-body {
+    margin-top: -90px;
+    color: #fff;
+}
+
+.internalLink {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+.roomDetails small {
+    font-weight: 500;
+    color: #a6a6a6;
+}
+
+#facilities img.card-img-top {
+    width: 70px;
+    margin: 0 auto;
+}
+
+#facilities h5.card-title {
+    font-size: 15px;
+    max-width: 118px;
+    margin: 0 auto;
+}
+
+#facilities .card-group {
+    padding: 0 80px;
+}
+
+#facilities .card{
+    padding: 20px 0;
+}
+
+.card-group.first .card.border-0:nth-child(even) {
+    background: #f3f3f3;
+}
+
+.card-group.second .card.border-0:nth-child(odd) {
+    background: #f3f3f3;
+}
+
+/*#activiitiesSection{
+    background-image: url(../images/activities-bg.png);
+    background-size: cover;
+}*/
+
+section#whyChooesSec{
+    background-image: url(../images/whyChooseBG.png);
+}
+
+section#whyChooesSec .card.mb-3 {
+    width: 49%;
+    display: inline-block;
+    border-radius: 0;
+    margin: 0 !important;
+    padding: 30px 50px 0!important;
+    background-color: transparent;
+    min-height: 170px;
+}
+
+.whyRightSec .card-body {
+    padding: 0 0 50px 10px;
+}
+
+.whyRightSec img.img-fluid.rounded-start {
+    width: 60px;
+}
+
+.whyRightSec .card-body h5.card-title {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+section#whyChooesSec .pad-80 {
+    padding: 150px 0 50px;
+}
+
+.card.mb-3.border-0.ctmBorder1 {
+    border-right: 1px solid #FF9800 !important;
+    border-bottom: 1px solid #FF9800 !important;
+}
+
+.card.mb-3.border-0.ctmBorder2 {
+    border-bottom: 1px solid #FF9800 !important;
+}
+
+.card.mb-3.border-0.ctmBorder3 {
+    border-right: 1px solid #FF9800 !important;
+}
+
+.footerCTALeft{
+    background-image: url(../images/footerCTA.png);
+    background-size: cover;
+
+}
+
+.footerCTARight{
+    background-color: #e45b00;
+    padding: 100px;
+}
+
+.footerCTARight h2{
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.footerCTARight .primaryBtn{
+    background-color: #fff;
+    color: #3b3b3b;
+}
+
+
+
+section#FooterSection{
+    background-image: url(../images/FooterBG.png);
+    background-size: cover;
+    color: #fff !important;
+    margin-top: -2px;
+    z-index: 220;
+    position: relative;
+}
+
+.socialMedia img.SocialIcon {
+    width: 35px;
+    margin-right: 10px;
+    filter: brightness(0) invert(1);
+}
+
+
+
+.socialMedia li {
+    list-style: none;
+    display: inline-block;
+}
+
+.socialMedia ul {
+    padding: 30px 0 00px 20px;
+}
+
+.footerOne li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.footerOne li{
+    padding: 5px 0; color: #fff;
+}
+
+.footerTwo img.SocialIcon {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1);
+    margin-right: 10px;
+}
+
+.contactDetails.d-flex {
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.col-md-3.footerOne h3, .col-md-3.footerTwo h3 {
+    margin-bottom: 20px;
+}
+
+section#FooterSection h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+section#FooterSection .footerOne ul {
+    padding: 0 0 0 15px !important;
+}
+
+
+#insidebanner{
+    background-image: url('../images/aboutUs.png');
+    background-size: cover;
+    height: 450px;
+}
+
+#insidebanner h1 {
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#experiencePage #insidebanner{
+    background-image: url('../images/experienceBanner.png');
+    background-size: cover;
+    height: 450px;
+}
+
+section#founderSec{
+    background-image: url('../images/founderBG.png');
+    background-size: cover;
+}
+ 
+#galleryPage #insidebanner{
+    background-image: url('../images/gallleryBanner.png');
+    background-size: cover;
+    height: 450px;
+}
+
+#roomPage #insidebanner{
+    background-image: url('../images/roomsBanner.png');
+    background-size: cover;
+    height: 450px;
+}
+
+.card-deck .card {
+    margin: 0 10px;
+}
+
+.card-deck .card img.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+section#FooterSection .container.pad-80 {
+    padding: 80px 0 50px;
+    border: transparent;
+}
+
+#contactPage img.contact-img{
+    width: 40px;
+    margin-bottom: 15px;
+}
+
+.cnt-details {
+    padding: 30px 0;
+    background: #fff;
+    min-height: 210px;
+    border-radius: 10px;
+    border: 1px solid #ddd;    
+}
+
+.roomDetailsSection h6.roomtypes {
+    background: #ff6600;
+    color: #fff;
+    font-size: 13px;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+#pills-tabContent .tab-pane {
+  padding: 20px;
+  border: 1px solid #ddd;
+  /* border-top: transparent; */
+}
+
+div#pills-tabContent {
+  position: relative;
+  top: -6px;
+}
+
+ul#pills-tab button {
+  border: 1px solid #ddd;
+  width: 200px;
+  border-radius: 0px;
+  padding: 20px 0;
+  font-size: 18px;
+  color: #3b3b3b; position: relative; z-index: 1;
+}
+
+.pr-20{
+  padding-right: 20px;
+}
+
+ul#pills-tab .nav-link.active {
+  background: #ff6600 !important;
+  color: #fff !important;
+  border: 1px solid #ff6600;
+  border-radius: 0;
+}
+
+ul#pills-tab button span.d-block {
+  font-size: 12px;
+}
+
+
+ul#pills-tab .nav-link.active:after {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #ff6600;
+  content: '';
+  right: 50%;
+  bottom: -5px;
+  transition: 0.5s;
+  transform: rotate(45deg);
+  z-index: 1;
+}
+
+.payForm1 label {
+  font-size: 12px;
+  display: none;
+}
+
+.form.payForm1 .mb-3 {
+  width: 33%;
+  display: inline-block;
+}
+
+.form.payForm .mb-3 {
+  width: 49%;
+  display: inline-block;
+}
+
+.singleRoomdetails h6 img {
+  width: 16px;
+}
+
+.card.mb-3.singleRoomdetails p {
+  font-size: 12px;
+}
+
+.card.mb-3.singleRoomdetails hr {
+  margin: 5px 0;
+}
+
+.selectedAllRooms {
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin-top: 30px;
+}
+
+.roomOuter {
+  padding: 20px;
+  border: 1px solid #ebebeb;
+  margin: 0 -10px 40px;
+  background: #f8f3f3;
+}
+
+.roomOuter button.btn.btn-dark {
+  width: 39px;
+  height: 39px;
+  border-radius: 4px;
+  position: relative;
+  bottom: 2px;
+  background: #6a6a6a;
+    border: transparent;
+}
+
+.roomOuter button.btn.btn-dark svg.feather.feather-rotate-ccw {
+  font-size: 10px;
+  width: 14px;
+}
+
+.roomOuter label {
+  font-size: 12px;
+  color: #716d6d;
+}
+
+.roomOuter input.form-control, select.form-select {
+  height: 40px;
+  border-radius: 2px;
+  font-size: 12px;
+}
+
+
+
+.ctmbg.position-relative {
+  width: 100%;
+  height: 34%;
+  position: absolute !important;
+  background: linear-gradient(0deg, rgb(28 28 28 / 67%) 0%, rgb(151 155 156 / 0%) 100%);
+}
+
+.ctmbg.position-relative h4 {
+  margin: 0 auto;
+  text-align: center;
+  line-height: 280px;
+  color: #fff;
+}
+
+.RoomcheckDet label {
+  font-size: 14px;
+  color: #565656;
+  font-weight: 600;
+}
+
+.total-price {
+  background: #ff6600;
+  padding: 5px;
+}
+
+.RoomImg img.card-img-top {
+  height: 175px;
+}
+
+button.btn.btn-primary.btn-sm {
+  background: #ff6600;
+  border: transparent;
+  position: relative;
+  right: 20px;
+  top: -5px;
+  border-radius: 15px;
+  padding: 5px 15px;
+}
+
+.RoomcheckDet input.form-control, .RoomcheckDet select.form-select {
+  height: 45px;
+  font-size: 14px;
+  color: #616161;
+}
+
+.form.payForm1 input.form-control {
+  height: 45PX;
+  font-size: 15px;
+}
+
+img.deleteIcon {
+  position: absolute;
+  width: 23px;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+}
+
+.PaymentSection label {
+  display: none;
+}
+
+.PaymentSection form{
+  margin-top: 30px;
+}
+
+button.btn.btn-primary.otplink {
+  background: transparent;
+  color: #ff6600;
+  text-decoration: underline;
+  border: transparent;
+  margin-bottom: 16px;
+  padding: 0 0 0 5px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.PaymentSection input.form-control {
+  height: 45px;
+  font-size: 14px;
+}
+
+
+
+/* .amenitiesSec .amenirtiesSec .secOne,
+.amenitiesSec .amenirtiesSec .secSec,
+.amenitiesSec .amenirtiesSec .secThrd,
+.amenitiesSec .amenirtiesSec .secFour  {
+  min-width: 24% !important;
+  display: inline-block;
+    /* border-right: 1px solid #ddd; 
+}
+
+.amenitiesSec .amenirtiesSec .secSec {
+    display: inline-block;
+    padding-left: 20px;
+    min-width: 140px;
+}
+
+.amenitiesSec .amenirtiesSec .secThrd {
+    padding-left: 20px;
+    min-width: 165px;
+}
+
+.amenitiesSec .amenirtiesSec .secFour {
+    padding-left: 15px;
+    border: none;
+} */
+
+
+.amenitiesSec ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.amenitiesSec li {
+  margin: 25px 0;
+}
+
+li:last-child {
+  margin-bottom: 5px;
+}
+
+.amenitiesSec li img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.roomDetailsSection li svg {
+    margin-right: 2px;
+    width: 16px;
+    color: #3b3b3b;
+}
+.roomDetailsSection h6 {
+    color: #ff6600;
+}
+
+.roomDetailsSection p {
+    font-size: 13px;
+    letter-spacing: -0.1px;
+}
+
+.roomInternalDetails li{
+    font-size: 13px;
+    font-weight: 500;
+    width: 49%;
+    display: inline-flex;
+}
+
+.bookingSection {
+    background: #ff6600;
+    padding: 15px 20px;
+    margin: 20px 0 0;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.bookingSection h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.bookingSection h3 img.rupeeIcon {
+    filter: brightness(0) invert(1);
+}
+
+.amenitiesSec {
+  background: #ffffff;
+  padding: 25px 25px 20px;
+  margin-bottom: 20px;
+  border: 2px solid #f4f4f4;
+  margin-top: 155px;
+}
+
+h3.ctmprice {
+  text-align: center;
+  background: #ff6f10;
+  padding: 10px 10px;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 15px;
+  margin-left: 20px;
+}
+
+h3.ctmprice img.rupeeIcon {
+  filter: brightness(0) invert(1);
+  width: 15px;
+  height: 14px;
+  position: relative;
+  top: -1px;
+}
+
+.amenitiesSec h6{
+    color: #3b3b3b;
+}
+
+.checkInDetails li {
+    margin-bottom: 5px;
+}
+
+.checkInDetails {
+  border: 1px solid #ddd;
+  padding: 20px 20px 0 20px;
+  font-size: 12px;
+  background: #ff6600;
+  color: #fff;
+}
+
+
+/* a.btn.btn-primary.secondaryBtn {
+    background: #fff;
+    color: #ff6600;
+    border: transparent;
+    height: 45px;
+    width: 120px;
+    line-height: 35px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 50px;
+} */
+
+
+input#adultsCounter, input#childrenCounter{
+  width: 40px;
+  text-align: center;
+  margin:  0 5px;
+}
+
+button.btn.btn-outline-secondary.btn-sm {
+  border-radius: 2px !important;
+}
+
+div#guestSelection label.form-label {
+  width: 100px;
+  font-size: 13px;
+  margin: 0;
+}
+
+#guestSelection select.form-select{
+  width: 70px;
+}
+
+
+
+
+@media screen and (min-width: 1120px) and (max-width: 1320px) {
+
+    section#whyChooesSec .card.mb-3 {
+        padding: 30px 30px 0 !important;
+    
+    }
+
+    .container {
+        max-width: 1200px;
+      }
+
+      .pad-80 {
+        padding: 60px 0;
+      }
+
+      .cnt-details {
+        padding: 15px;
+      }
+
+}
+
+
+
+@media screen and (min-width: 1001px) and (max-width: 1024px) {
+    
+    .carousel-caption {
+        bottom: 3rem;
+      }
+
+      section#whyChooesSec .card.mb-3 {
+        width: 49%;
+        display: inline-block;
+        border-radius: 0;
+        margin: 0 !important;
+        padding: 40px 10px 0 !important;
+        background-color: transparent;
+        min-height: 220px;
+      }
+
+      .roomInternalDetails li{
+        width: 100%;
+      }
+
+      .amenitiesSec .amenirtiesSec .secOne, .amenitiesSec .amenirtiesSec .secSec, .amenitiesSec .amenirtiesSec .secThrd, .amenitiesSec .amenirtiesSec .secFour {
+        min-width: 40% !important;
+        display: inline-block;
+        border-right: 1px solid #ddd;
+        padding: 0 !important;
+      }
+
+      .amenitiesSec .amenirtiesSec .secSec, .amenitiesSec .amenirtiesSec .secFour {
+        padding-left: 30px !important;
+        border: transparent;
+      }
+
+      .pad-80 {
+        padding: 60px 0;
+      }
+
+}
+
+
+
+@media only screen and (max-width: 479px) {
+
+#carouselExampleCaptions .d-block.w-100 {
+    height: 250px;
+    object-fit: cover;
+  }
+
+  .ctm-pad-80 {
+    padding: 40px 0;
+  }
+
+  .pad-80 {
+    padding: 40px 0;
+  }
+
+  #ThrdSection .mx-auto.w-75 {
+    width: 90% !important;
+  }
+
+  #facilities .w-50.text-center {
+    width: 75% !important;
+  }
+
+  #facilities h5.card-title{
+    max-width: none;
+  }
+
+  #facilities .card {
+    padding: 20px 0 5px;
+    border-radius: 0;
+  }
+
+  .card-group.second .card.border-0:nth-child(odd) {
+    background: #fff;
+  }
+
+  .card-group.second .card.border-0:nth-child(even) {
+    background: #f3f3f3;
+  }
+
+  #activiitiesSection .w-50.mx-auto {
+    width: 70% !important;
+  }
+
+  section#whyChooesSec .pad-80 {
+    padding: 50px 30px 20px;
+  }
+
+  .whyRightSec .card-body {
+    padding: 15px 0 10px 0;
+  }
+
+  section#whyChooesSec .card.mb-3 {
+    width: 100%;
+    display: inline-block;
+    border-radius: 0;
+    margin: 0 !important;
+    padding: 20px !important;
+    background-color: transparent;
+    min-height: auto;
+  }
+
+  .card.mb-3.border-0.ctmBorder1{
+    border-right: none !important;
+  }
+
+  .card.mb-3.border-0.ctmBorder3 {
+    border-right: none !important;
+    border-bottom: 1px solid #FF9800 !important;
+  }
+
+  #gallery .container.pad-80 {
+    padding: 30px;
+  }
+
+  .footerCTARight {
+    background-color: #e45b00;
+    padding: 40px;
+  }
+
+  section#FooterSection .container.pad-80 {
+    padding: 30px;
+    border: transparent;
+  }
+
+  .socialMedia ul {
+    padding: 15px 0;
+  }
+
+  section#FooterSection h3 {
+    margin-bottom: 5px;
+  }
+
+  .col-md-3.footerTwo h3 {
+    margin-bottom: 15px !important;
+  }
+
+  .footerThree h3 {
+    margin: 20px 0 15px !important;
+  }
+
+  section#header .navbar-nav.mb-2.mb-md-0.align-items-center {
+    text-align: left !important;
+    align-items: start !important;
+  }
+
+ #insidebanner{
+    height: 250px !important;
+  }
+
+  div#mainImageSlider img.d-block.w-100 {
+    height: 250px;
+  }
+
+  #roomPage .container.pad-80 .row.roomOne.pt-5.pb-5 {
+    padding-top: 0 !important;
+  }
+
+  #roomPage .container.pad-80 {
+    padding: 30px !important;
+  }
+
+  .col-lg-6.roomDetailsSection.pl-5 {
+    padding: 20px 10px;
+  }
+
+  .roomInternalDetails li{
+    width: 100%;
+  }
+
+  .amenitiesSec .amenirtiesSec .secOne, .amenitiesSec .amenirtiesSec .secSec, .amenitiesSec .amenirtiesSec .secThrd, .amenitiesSec .amenirtiesSec .secFour{
+    width: 100%; border: transparent;
+  }
+
+  .amenitiesSec .amenirtiesSec .secSec, .amenitiesSec .amenirtiesSec .secFour{
+    border-right: 0; padding: 0;
+  }
+
+  .amenitiesSec .amenirtiesSec .secThrd {
+    padding-left: 0;
+    min-width: 159px;
+  }
+
+  #roomPage .container.pad-80 .row.roomOne.pt-5.pb-5 {
+    padding-bottom: 0 !important;
+    margin-bottom: 10px !important;
+    padding-top: 0 !important;
+    margin-top: 0px !important;
+  }
+
+  #contactPage .row.text-center.w-75.mx-auto.mb-5 .col-md-4 {
+    margin-bottom: 20px;
+  }
+
+  #contactPage .row.text-center.w-75.mx-auto.mb-5 {
+    margin-bottom: 0 !important;
+  }
+
+  .map-sec {
+    margin-top: 0 !important;
+    padding-top: 20px !important;
+  }
+
+  section#header .container {
+    padding: 0 30px 0 0;
+  }
+
+  #aboutSecOne .card-deck.d-flex {
+    display: block !important;
+  }
+
+  #aboutSecOne .card-deck .card {
+    margin-bottom: 20px;
+  }
+
+  section#founderSec{
+    padding: 30px;
+  }
+
+  #aboutSecOne .row.pt-5.pb-5 {
+    padding: 0 0 20px 0 !important;
+  }
+
+  #galleryPage .gallery {
+    padding: 0 30px;
+  }
+
+  .checkInDetails {
+    display: block !important;
+}
+
+.amenitiesSec .amenirtiesSec .secFour li:last-child {
+    display: none;
+}
+
+.bookingSection {
+    background: #ff6600;
+    padding: 10px;
+}
+
+section#experienceFirstSec .w-75.mx-auto {
+    width: 90% !important;
+}
+
+section#experienceFirstSec img {
+    width: 90%;
+    margin: 30px auto 0;
+    display: block;
+}
+
+section#experienceFirstSec .row.pt-5.align-items-center {
+    padding: 0 !important;
+}
+
+section#experienceFirstSec .row.pt-5.align-items-center img{
+    margin:0 ;
+}
+
+.natureSec img {
+    margin-bottom: 30px !important;
+}
+}

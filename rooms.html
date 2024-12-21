@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Maratha</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/aos.css">
+    <link rel="stylesheet" href="./css/flatpickr.min.css">
+    <link href="./css/bootstrap-icons.css" rel="stylesheet">
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+
+
+<style>
+
+</style>
+
+<body id="roomPage">
+    <section id="header">
+        <nav class="navbar navbar-expand-md fixed-top bg-white">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="./images/Maratha-Empire.png" height="70px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse flex-row-reverse" id="navbarCollapse">
+                    <ul class="navbar-nav mb-2 mb-md-0 align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link " href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about-us.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="rooms.html">Rooms</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="experience.html">Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact-us.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-primary primaryBtn" href="rooms.html">Book Now</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <section id="insidebanner" data-aos="fade-in" data-aos-duration="1000">
+        <h1>Rooms</h1>
+    </section>
+
+    <div class="container pad-80">
+        <h2 class="text-center">Book Single or Multiple Rooms</h2>
+        <p class="text-center pb-3">Select single or multiple rooms according to availability for your desired dates and
+            click <strong>'Confirm Booking'</strong> to procced to the payment page.</p>
+        <div class="roomOuterSection">
+            <div class="row row-cols-1 row-cols-md-4 g-4 mb-5">
+                <div class="col">
+                    <div class="card">
+                        <div class="RoomImg">
+                            <div class="ctmbg position-relative">
+                                <h4>Malhar Suite</h4>
+                            </div>
+                            <img src="./images/Malhar-Suite-1.webp" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body RoomcheckDet">
+
+                            <!-- Total Price -->
+                            <div class="total-price mb-3 text-center">
+                                <h5 class="m-0 p-2 text-white">₹ <span id="totalPrice">5000</span> (Per Night)</h5>
+                            </div>
+
+                            <form>
+                                <div class="mb-3">
+                                    <label for="dateRange" class="pb-1">Check-in & Check-out Dates</label>
+                                    <input type="text" class="form-control" id="dateRange"
+                                        placeholder="Select your stay dates" readonly>
+                                </div>
+                                <!-- Number of Guests -->
+
+                                <div class="mb-3">
+                                    <label for="guestSelection" class="form-label">Number of Guests</label>
+                                    <div id="guestSelection" class="d-flex justify-content-around">
+                                        <!-- Adults Dropdown -->
+                                        <div>
+                                            <label for="adultsDropdown" class="form-label">Adults</label>
+                                            <select id="adultsDropdown" class="form-select guest-dropdown"
+                                                onchange="updateGuestSelection()">
+                                                <option value="1">1</option>
+                                                <option value="2" selected>2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                            </select>
+                                        </div>
+
+                                        <!-- Children Dropdown -->
+                                        <div >
+                                            <label for="childrenDropdown" class="form-label">Children</label>
+                                            <select id="childrenDropdown" class="form-select guest-dropdown"
+                                                onchange="updateGuestSelection()">
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="btn btn-dark secondaryBtn" fdprocessedid="urkhg6gf">Add Room</button>
+
+                                <!-- Total Number of Guests Display -->
+                                <!-- <div class="mb-3">
+                                    <label class="form-label">Total Number of Guests</label>
+                                    <div id="totalGuestsDisplay">1 Guests</div>
+                                </div> -->
+
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <div class="RoomImg">
+                            <div class="ctmbg position-relative">
+                                <h4>Rajgad</h4>
+                            </div>
+                            <img src="./images/Malhar-Suite-2.webp" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body RoomcheckDet">
+
+                            <!-- Total Price -->
+                            <div class="total-price mb-3 text-center">
+                                <h5 class="m-0 p-2 text-white">₹ <span id="totalPrice">5000</span> (Per Night)</h5>
+                            </div>
+
+                            <form>
+                                <div class="mb-3">
+                                    <label for="dateRange" class="pb-1">Check-in & Check-out Dates</label>
+                                    <input type="text" class="form-control" id="dateRange"
+                                        placeholder="Select your stay dates" readonly>
+                                </div>
+                                <!-- Number of Guests -->
+
+                                <div class="mb-3">
+                                    <label for="guestSelection" class="form-label">Number of Guests</label>
+                                    <div id="guestSelection" class="d-flex justify-content-around">
+                                        <!-- Adults Dropdown -->
+                                        <div>
+                                            <label for="adultsDropdown" class="form-label">Adults</label>
+                                            <select id="adultsDropdown" class="form-select guest-dropdown"
+                                                onchange="updateGuestSelection()">
+                                                <option value="1">1</option>
+                                                <option value="2" selected>2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                            </select>
+                                        </div>
+
+                                        <!-- Children Dropdown -->
+                                        <div >
+                                            <label for="childrenDropdown" class="form-label">Children</label>
+                                            <select id="childrenDropdown" class="form-select guest-dropdown"
+                                                onchange="updateGuestSelection()">
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="btn btn-dark secondaryBtn" fdprocessedid="urkhg6gf">Add Room</button>
+
+                                <!-- Total Number of Guests Display -->
+                                <!-- <div class="mb-3">
+                                    <label class="form-label">Total Number of Guests</label>
+                                    <div id="totalGuestsDisplay">1 Guests</div>
+                                </div> -->
+
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <div class="RoomImg">
+                            <div class="ctmbg position-relative">
+                                <h4>Raigad</h4>
+                            </div>
+                            <img src="./images/Malhar-Suite-3.webp" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body RoomcheckDet">
+
+                            <!-- Total Price -->
+                            <div class="total-price mb-3 text-center">
+                                <h5 class="m-0 p-2 text-white">₹ <span id="totalPrice">5000</span> (Per Night)</h5>
+                            </div>
+
+                            <form>
+                                <div class="mb-3">
+                                    <label for="dateRange" class="pb-1">Check-in & Check-out Dates</label>
+                                    <input type="text" class="form-control" id="dateRange"
+                                        placeholder="Select your stay dates" readonly>
+                                </div>
+                                <!-- Number of Guests -->
+
+                                <div class="mb-3">
+                                    <label for="guestSelection" class="form-label">Number of Guests</label>
+                                    <div id="guestSelection" class="d-flex justify-content-around">
+                                        <!-- Adults Dropdown -->
+                                        <div>
+                                            <label for="adultsDropdown" class="form-label">Adults</label>
+                                            <select id="adultsDropdown" class="form-select guest-dropdown"
+                                                onchange="updateGuestSelection()">
+                                                <option value="1">1</option>
+                                                <option value="2" selected>2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                            </select>
+                                        </div>
+
+                                        <!-- Children Dropdown -->
+                                        <div >
+                                            <label for="childrenDropdown" class="form-label">Children</label>
+                                            <select id="childrenDropdown" class="form-select guest-dropdown"
+                                                onchange="updateGuestSelection()">
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="btn btn-dark secondaryBtn" fdprocessedid="urkhg6gf">Add Room</button>
+
+                                <!-- Total Number of Guests Display -->
+                                <!-- <div class="mb-3">
+                                    <label class="form-label">Total Number of Guests</label>
+                                    <div id="totalGuestsDisplay">1 Guests</div>
+                                </div> -->
+
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <div class="RoomImg">
+                            <div class="ctmbg position-relative">
+                                <h4>Pratapgad</h4>
+                            </div>
+                            <img src="./images/Malhar-Suite-4.webp" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body RoomcheckDet">
+
+                            <!-- Total Price -->
+                            <div class="total-price mb-3 text-center">
+                                <h5 class="m-0 p-2 text-white">₹ <span id="totalPrice">5000</span> (Per Night)</h5>
+                            </div>
+
+                            <form>
+                                <div class="mb-3">
+                                    <label for="dateRange" class="pb-1">Check-in & Check-out Dates</label>
+                                    <input type="text" class="form-control" id="dateRange"
+                                        placeholder="Select your stay dates" readonly>
+                                </div>
+                                <!-- Number of Guests -->
+
+                                <div class="mb-3">
+                                    <label for="guestSelection" class="form-label">Number of Guests</label>
+                                    <div id="guestSelection" class="d-flex justify-content-around">
+                                        <!-- Adults Dropdown -->
+                                        <div>
+                                            <label for="adultsDropdown" class="form-label">Adults</label>
+                                            <select id="adultsDropdown" class="form-select guest-dropdown"
+                                                onchange="updateGuestSelection()">
+                                                <option value="1">1</option>
+                                                <option value="2" selected>2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                            </select>
+                                        </div>
+
+                                        <!-- Children Dropdown -->
+                                        <div >
+                                            <label for="childrenDropdown" class="form-label">Children</label>
+                                            <select id="childrenDropdown" class="form-select guest-dropdown"
+                                                onchange="updateGuestSelection()">
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="btn btn-dark secondaryBtn" fdprocessedid="urkhg6gf">Add Room</button>
+
+                                <!-- Total Number of Guests Display -->
+                                <!-- <div class="mb-3">
+                                    <label class="form-label">Total Number of Guests</label>
+                                    <div id="totalGuestsDisplay">1 Guests</div>
+                                </div> -->
+
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <a class="btn btn-primary primaryBtn mx-auto d-table mb-5" href="./booking.html"> Confirm Booking</a>
+        </div>
+        <hr>
+        <div class="row">
+            <h2 class="text-center pb-3 pt-5">Rooms Specifications and Amenities</h2>
+            <ul class="nav nav-pills justify-content-center" id="pills-tab" role="tablist" aria-orientation="vertical">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                        aria-selected="true">
+                        <span class="d-block">LUXURY</span>
+                        Malhar Suite
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                        aria-selected="false">
+                        <span class="d-block">LUXURY</span>
+                        Raigad Retreat
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-messages-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-messages" type="button" role="tab" aria-controls="pills-messages"
+                        aria-selected="false">
+                        <span class="d-block">PREMIUM</span>
+                        Rajgad
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-settings-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-settings" type="button" role="tab" aria-controls="pills-settings"
+                        aria-selected="false">
+                        <span class="d-block">STANDARD</span>
+                        Pratapgad
+                    </button>
+                </li>
+            </ul>
+
+
+            <!-- Vertical Tabs Content -->
+            <div class="col-md-12 p-0">
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                        aria-labelledby="pills-home-tab">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-9">
+                                    <div class="d-flex">
+                                        <h2>Malhar Suite</h2>
+                                        <h3 class="ctmprice"><img src="./images/rupee-sign.svg" class="rupeeIcon"
+                                                style="height: 20px;"> 15000/ per night</h3>
+                                    </div>
+
+                                    <h6>Overview</h6>
+                                    <p>The Malhar Executive Room offers a perfect blend of comfort and elegance,
+                                        inspired by the
+                                        serene beauty of the Malhar region. With spacious interiors and a private
+                                        balcony
+                                        overlooking lush greenery, this room provides a peaceful retreat, allowing
+                                        guests to
+                                        relax and unwind amidst nature while enjoying modern amenities. Ideal for those
+                                        seeking
+                                        both luxury and tranquility.</p>
+                                    <hr>
+                                    <div class="roomInternalDetails">
+                                        <h6>Room Details</h6>
+                                        <ul class="p-0 list-unstyled">
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-check">
+                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                </svg>
+                                                <span><strong>Room Size: </strong><strong style="color: #ff6600;">450
+                                                        sq.
+                                                        ft.</strong> with private balcony</span>
+                                            </li>
+
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-check">
+                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                </svg>
+                                                <span><strong>Bed: </strong>Queen-sized bed with plush linens</span>
+                                            </li>
+
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-check">
+                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                </svg>
+                                                <span><strong>Occupancy: </strong>2 adults</span>
+                                            </li>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-check">
+                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                </svg>
+                                                <span><strong>View: </strong>Overlooking lush greenery and hills</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="imgGallery">
+                                        <div class="row">
+                                            <div class="col-lg-9">
+                                                <div class="mx-auto mb-3">
+                                                    <div id="mainImageSlider" class="carousel slide"
+                                                        data-bs-ride="carousel">
+                                                        <div class="carousel-inner">
+
+                                                            <div class="carousel-item active">
+                                                                <img src="./images/Malhar-Suite-1.webp"
+                                                                    class="d-block w-100" alt="Image 1">
+                                                            </div>
+                                                            <div class="carousel-item">
+                                                                <img src="./images/Malhar-Suite-2.webp"
+                                                                    class="d-block w-100" alt="Image 2">
+                                                            </div>
+                                                            <div class="carousel-item">
+                                                                <img src="./images/Malhar-Suite-3.webp"
+                                                                    class="d-block w-100" alt="Image 3">
+                                                            </div>
+                                                            <div class="carousel-item">
+                                                                <img src="./images/Malhar-Suite-4.webp"
+                                                                    class="d-block w-100" alt="Image 4">
+                                                            </div>
+                                                        </div>
+                                                        <!-- Carousel Controls -->
+                                                        <button class="carousel-control-prev" type="button"
+                                                            data-bs-target="#mainImageSlider" data-bs-slide="prev">
+                                                            <span class="carousel-control-prev-icon"
+                                                                aria-hidden="true"></span>
+                                                            <span class="visually-hidden">Previous</span>
+                                                        </button>
+                                                        <button class="carousel-control-next" type="button"
+                                                            data-bs-target="#mainImageSlider" data-bs-slide="next">
+                                                            <span class="carousel-control-next-icon"
+                                                                aria-hidden="true"></span>
+                                                            <span class="visually-hidden">Next</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3">
+                                                <!-- Thumbnails -->
+                                                <div class="mx-auto">
+                                                    <div class="thumbnail-images">
+                                                        <div class="mb-2">
+                                                            <img src="./images/Malhar-Suite-1.webp"
+                                                                class="img-fluid active" alt="Thumbnail 1"
+                                                                onclick="setActiveSlide(0)">
+                                                        </div>
+                                                        <div class="mb-2">
+                                                            <img src="./images/Malhar-Suite-2.webp" class="img-fluid"
+                                                                alt="Thumbnail 2" onclick="setActiveSlide(1)">
+                                                        </div>
+                                                        <div class="mb-2">
+                                                            <img src="./images/Malhar-Suite-3.webp" class="img-fluid"
+                                                                alt="Thumbnail 3" onclick="setActiveSlide(2)">
+                                                        </div>
+                                                        <div class="mb-2">
+                                                            <img src="./images/Malhar-Suite-4.webp" class="img-fluid"
+                                                                alt="Thumbnail 4" onclick="setActiveSlide(3)">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-lg-3">
+
+                                    <div class="amenitiesSec">
+                                        <h6>Amenities</h6>
+                                        <div class="amenirtiesSec">
+                                            <div class="secOne">
+                                                <ul>
+                                                    <li>
+                                                        <img src="./images/amenities-1.svg"> AC
+                                                    </li>
+                                                    <li>
+                                                        <img src="./images/amenities-2.svg"> 2 Adults
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="secSec">
+                                                <ul>
+                                                    <li>
+                                                        <img src="./images/amenities-3.svg"> Wifi
+                                                    </li>
+                                                    <li>
+                                                        <img src="./images/amenities-04.svg"> Breakfast
+                                                    </li>
+                                                    <li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="secThrd">
+                                                <ul>
+                                                    <li>
+                                                        <img src="./images/amenities-5.svg"> Mini Fridge
+                                                    </li>
+                                                    <li>
+                                                        <img src="./images/amenities-6.svg"> Safety Locker
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="secFour">
+                                                <ul>
+                                                    <li>
+                                                        <img src="./images/amenities-7.svg"> Sofa Cum-Bed
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        </ul>
+                                    </div>
+
+                                    <div class="checkInDetails ">
+                                        <ul class="list-unstyled padRight-50">
+                                            <h6>Check In</h6>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-check">
+                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                </svg> Check-in: 13:00 PM</li>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-check">
+                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                </svg> Early check-in subject to availability</li>
+                                        </ul>
+                                        <ul class="list-unstyled">
+                                            <h6>Check-out</h6>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-check">
+                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                </svg> Check-out: 10:00 AM</li>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-check">
+                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                </svg> Express check-out</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="instructionSec">
+                                <h6>Special check-in instructions</h6>
+                                <p>Five days prior to arrival, guests will receive an email containing check-in
+                                    instructions. Upon arrival, our front desk staff will warmly greet guests.
+                                    For
+                                    further information, please refer to the details provided on the booking
+                                    confirmation.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-9">
+                                    <div class="d-flex">
+                                        <h2>Rajgad</h2>
+                                        <h3 class="ctmprice"><img src="./images/rupee-sign.svg" class="rupeeIcon"
+                                                style="height: 20px;"> 15000/ per night</h3>
+                                    </div>
+                                    <h6>Overview</h6>
+                                    <p>The Malhar Executive Room offers a perfect blend of comfort and elegance,
+                                        inspired by the
+                                        serene beauty of the Malhar region. With spacious interiors and a private
+                                        balcony
+                                        overlooking lush greenery, this room provides a peaceful retreat, allowing
+                                        guests to
+                                        relax and unwind amidst nature while enjoying modern amenities. Ideal for those
+                                        seeking
+                                        both luxury and tranquility.</p>
+                                    <hr>
+                                    <div class="roomInternalDetails">
+                                        <h6>Room Details</h6>
+                                        <ul class="p-0 list-unstyled">
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-check">
+                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                </svg>
+                                                <span><strong>Room Size: </strong><strong style="color: #ff6600;">450
+                                                        sq.
+                                                        ft.</strong> with private balcony</span>
+                                            </li>
+
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-check">
+                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                </svg>
+                                                <span><strong>Bed: </strong>Queen-sized bed with plush linens</span>
+                                            </li>
+
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-check">
+                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                </svg>
+                                                <span><strong>Occupancy: </strong>2 adults</span>
+                                            </li>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-check">
+                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                </svg>
+                                                <span><strong>View: </strong>Overlooking lush greenery and hills</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="imgGallery">
+                                        <div class="row">
+                                            <div class="col-lg-9">
+                                                <div class="mx-auto mb-3">
+                                                    <div id="mainImageSlider" class="carousel slide"
+                                                        data-bs-ride="carousel">
+                                                        <div class="carousel-inner">
+
+                                                            <div class="carousel-item active">
+                                                                <img src="./images/Malhar-Suite-1.webp"
+                                                                    class="d-block w-100" alt="Image 1">
+                                                            </div>
+                                                            <div class="carousel-item">
+                                                                <img src="./images/Malhar-Suite-2.webp"
+                                                                    class="d-block w-100" alt="Image 2">
+                                                            </div>
+                                                            <div class="carousel-item">
+                                                                <img src="./images/Malhar-Suite-3.webp"
+                                                                    class="d-block w-100" alt="Image 3">
+                                                            </div>
+                                                            <div class="carousel-item">
+                                                                <img src="./images/Malhar-Suite-4.webp"
+                                                                    class="d-block w-100" alt="Image 4">
+                                                            </div>
+                                                        </div>
+                                                        <!-- Carousel Controls -->
+                                                        <button class="carousel-control-prev" type="button"
+                                                            data-bs-target="#mainImageSlider" data-bs-slide="prev">
+                                                            <span class="carousel-control-prev-icon"
+                                                                aria-hidden="true"></span>
+                                                            <span class="visually-hidden">Previous</span>
+                                                        </button>
+                                                        <button class="carousel-control-next" type="button"
+                                                            data-bs-target="#mainImageSlider" data-bs-slide="next">
+                                                            <span class="carousel-control-next-icon"
+                                                                aria-hidden="true"></span>
+                                                            <span class="visually-hidden">Next</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3">
+                                                <!-- Thumbnails -->
+                                                <div class="mx-auto">
+                                                    <div class="thumbnail-images">
+                                                        <div class="mb-2">
+                                                            <img src="./images/Malhar-Suite-1.webp"
+                                                                class="img-fluid active" alt="Thumbnail 1"
+                                                                onclick="setActiveSlide(0)">
+                                                        </div>
+                                                        <div class="mb-2">
+                                                            <img src="./images/Malhar-Suite-2.webp" class="img-fluid"
+                                                                alt="Thumbnail 2" onclick="setActiveSlide(1)">
+                                                        </div>
+                                                        <div class="mb-2">
+                                                            <img src="./images/Malhar-Suite-3.webp" class="img-fluid"
+                                                                alt="Thumbnail 3" onclick="setActiveSlide(2)">
+                                                        </div>
+                                                        <div class="mb-2">
+                                                            <img src="./images/Malhar-Suite-4.webp" class="img-fluid"
+                                                                alt="Thumbnail 4" onclick="setActiveSlide(3)">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-lg-3">
+
+                                    <div class="amenitiesSec">
+                                        <h6>Amenities</h6>
+                                        <div class="amenirtiesSec">
+                                            <div class="secOne">
+                                                <ul>
+                                                    <li>
+                                                        <img src="./images/amenities-1.svg"> AC
+                                                    </li>
+                                                    <li>
+                                                        <img src="./images/amenities-2.svg"> 2 Adults
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="secSec">
+                                                <ul>
+                                                    <li>
+                                                        <img src="./images/amenities-3.svg"> Wifi
+                                                    </li>
+                                                    <li>
+                                                        <img src="./images/amenities-04.svg"> Breakfast
+                                                    </li>
+                                                    <li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="secThrd">
+                                                <ul>
+                                                    <li>
+                                                        <img src="./images/amenities-5.svg"> Mini Fridge
+                                                    </li>
+                                                    <li>
+                                                        <img src="./images/amenities-6.svg"> Safety Locker
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="secFour">
+                                                <ul>
+                                                    <li>
+                                                        <img src="./images/amenities-7.svg"> Sofa Cum-Bed
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        </ul>
+                                    </div>
+
+                                    <div class="checkInDetails">
+                                        <ul class="list-unstyled padRight-50">
+                                            <h6>Check In</h6>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-check">
+                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                </svg> Check-in: 13:00 PM</li>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-check">
+                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                </svg> Early check-in subject to availability</li>
+                                        </ul>
+                                        <ul class="list-unstyled">
+                                            <h6>Check-out</h6>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-check">
+                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                </svg> Check-out: 10:00 AM</li>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-check">
+                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                </svg> Express check-out</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <hr>
+                            <div class="instructionSec">
+                                <h6>Special check-in instructions</h6>
+                                <p>Five days prior to arrival, guests will receive an email containing check-in
+                                    instructions. Upon arrival, our front desk staff will warmly greet guests.
+                                    For
+                                    further information, please refer to the details provided on the booking
+                                    confirmation.</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="pills-messages" role="tabpanel" aria-labelledby="pills-messages-tab">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-9">
+                                    <div class="d-flex">
+                                        <h2>Raigad</h2>
+                                        <h3 class="ctmprice"><img src="./images/rupee-sign.svg" class="rupeeIcon"
+                                                style="height: 20px;"> 10000/ per night</h3>
+                                    </div>
+                                    <h6>Overview</h6>
+                                    <p>The Malhar Executive Room offers a perfect blend of comfort and elegance,
+                                        inspired by the
+                                        serene beauty of the Malhar region. With spacious interiors and a private
+                                        balcony
+                                        overlooking lush greenery, this room provides a peaceful retreat, allowing
+                                        guests to
+                                        relax and unwind amidst nature while enjoying modern amenities. Ideal for those
+                                        seeking
+                                        both luxury and tranquility.</p>
+                                    <hr>
+                                    <div class="roomInternalDetails">
+                                        <h6>Room Details</h6>
+                                        <ul class="p-0 list-unstyled">
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-check">
+                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                </svg>
+                                                <span><strong>Room Size: </strong><strong style="color: #ff6600;">450
+                                                        sq.
+                                                        ft.</strong> with private balcony</span>
+                                            </li>
+
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-check">
+                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                </svg>
+                                                <span><strong>Bed: </strong>Queen-sized bed with plush linens</span>
+                                            </li>
+
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-check">
+                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                </svg>
+                                                <span><strong>Occupancy: </strong>2 adults</span>
+                                            </li>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-check">
+                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                </svg>
+                                                <span><strong>View: </strong>Overlooking lush greenery and hills</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="imgGallery">
+                                        <div class="row">
+                                            <div class="col-lg-9">
+                                                <div class="mx-auto mb-3">
+                                                    <div id="mainImageSlider" class="carousel slide"
+                                                        data-bs-ride="carousel">
+                                                        <div class="carousel-inner">
+
+                                                            <div class="carousel-item active">
+                                                                <img src="./images/Malhar-Suite-1.webp"
+                                                                    class="d-block w-100" alt="Image 1">
+                                                            </div>
+                                                            <div class="carousel-item">
+                                                                <img src="./images/Malhar-Suite-2.webp"
+                                                                    class="d-block w-100" alt="Image 2">
+                                                            </div>
+                                                            <div class="carousel-item">
+                                                                <img src="./images/Malhar-Suite-3.webp"
+                                                                    class="d-block w-100" alt="Image 3">
+                                                            </div>
+                                                            <div class="carousel-item">
+                                                                <img src="./images/Malhar-Suite-4.webp"
+                                                                    class="d-block w-100" alt="Image 4">
+                                                            </div>
+                                                        </div>
+                                                        <!-- Carousel Controls -->
+                                                        <button class="carousel-control-prev" type="button"
+                                                            data-bs-target="#mainImageSlider" data-bs-slide="prev">
+                                                            <span class="carousel-control-prev-icon"
+                                                                aria-hidden="true"></span>
+                                                            <span class="visually-hidden">Previous</span>
+                                                        </button>
+                                                        <button class="carousel-control-next" type="button"
+                                                            data-bs-target="#mainImageSlider" data-bs-slide="next">
+                                                            <span class="carousel-control-next-icon"
+                                                                aria-hidden="true"></span>
+                                                            <span class="visually-hidden">Next</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3">
+                                                <!-- Thumbnails -->
+                                                <div class="mx-auto">
+                                                    <div class="thumbnail-images">
+                                                        <div class="mb-2">
+                                                            <img src="./images/Malhar-Suite-1.webp"
+                                                                class="img-fluid active" alt="Thumbnail 1"
+                                                                onclick="setActiveSlide(0)">
+                                                        </div>
+                                                        <div class="mb-2">
+                                                            <img src="./images/Malhar-Suite-2.webp" class="img-fluid"
+                                                                alt="Thumbnail 2" onclick="setActiveSlide(1)">
+                                                        </div>
+                                                        <div class="mb-2">
+                                                            <img src="./images/Malhar-Suite-3.webp" class="img-fluid"
+                                                                alt="Thumbnail 3" onclick="setActiveSlide(2)">
+                                                        </div>
+                                                        <div class="mb-2">
+                                                            <img src="./images/Malhar-Suite-4.webp" class="img-fluid"
+                                                                alt="Thumbnail 4" onclick="setActiveSlide(3)">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3">
+                                    <div class="amenitiesSec">
+                                        <h6>Amenities</h6>
+                                        <div class="amenirtiesSec">
+                                            <div class="secOne">
+                                                <ul>
+                                                    <li>
+                                                        <img src="./images/amenities-1.svg"> AC
+                                                    </li>
+                                                    <li>
+                                                        <img src="./images/amenities-2.svg"> 2 Adults
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="secSec">
+                                                <ul>
+                                                    <li>
+                                                        <img src="./images/amenities-3.svg"> Wifi
+                                                    </li>
+                                                    <li>
+                                                        <img src="./images/amenities-04.svg"> Breakfast
+                                                    </li>
+                                                    <li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="secThrd">
+                                                <ul>
+                                                    <li>
+                                                        <img src="./images/amenities-5.svg"> Mini Fridge
+                                                    </li>
+                                                    <li>
+                                                        <img src="./images/amenities-6.svg"> Safety Locker
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="secFour">
+                                                <ul>
+                                                    <li>
+                                                        <img src="./images/amenities-7.svg"> Sofa Cum-Bed
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        </ul>
+                                    </div>
+
+                                    <div class="checkInDetails">
+                                        <ul class="list-unstyled padRight-50">
+                                            <h6>Check In</h6>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-check">
+                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                </svg> Check-in: 13:00 PM</li>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-check">
+                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                </svg> Early check-in subject to availability</li>
+                                        </ul>
+                                        <ul class="list-unstyled">
+                                            <h6>Check-out</h6>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-check">
+                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                </svg> Check-out: 10:00 AM</li>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-check">
+                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                </svg> Express check-out</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="instructionSec">
+                                <h6>Special check-in instructions</h6>
+                                <p>Five days prior to arrival, guests will receive an email containing check-in
+                                    instructions. Upon arrival, our front desk staff will warmly greet guests. For
+                                    further information, please refer to the details provided on the booking
+                                    confirmation.</p>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-settings" role="tabpanel" aria-labelledby="pills-settings-tab">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-9">
+                                    <div class="d-flex">
+                                        <h2>Pratapgad</h2>
+                                        <h3 class="ctmprice"><img src="./images/rupee-sign.svg" class="rupeeIcon"
+                                                style="height: 20px;"> 8000/ per night</h3>
+                                    </div>
+                                    <h6>Overview</h6>
+                                    <p>The Malhar Executive Room offers a perfect blend of comfort and elegance,
+                                        inspired by the
+                                        serene beauty of the Malhar region. With spacious interiors and a private
+                                        balcony
+                                        overlooking lush greenery, this room provides a peaceful retreat, allowing
+                                        guests to
+                                        relax and unwind amidst nature while enjoying modern amenities. Ideal for those
+                                        seeking
+                                        both luxury and tranquility.</p>
+                                    <hr>
+                                    <div class="roomInternalDetails">
+                                        <h6>Room Details</h6>
+                                        <ul class="p-0 list-unstyled">
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-check">
+                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                </svg>
+                                                <span><strong>Room Size: </strong><strong style="color: #ff6600;">450
+                                                        sq.
+                                                        ft.</strong> with private balcony</span>
+                                            </li>
+
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-check">
+                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                </svg>
+                                                <span><strong>Bed: </strong>Queen-sized bed with plush linens</span>
+                                            </li>
+
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-check">
+                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                </svg>
+                                                <span><strong>Occupancy: </strong>2 adults</span>
+                                            </li>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-check">
+                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                </svg>
+                                                <span><strong>View: </strong>Overlooking lush greenery and hills</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="imgGallery">
+                                        <div class="row">
+                                            <div class="col-lg-9">
+                                                <div class="mx-auto mb-3">
+                                                    <div id="mainImageSlider" class="carousel slide"
+                                                        data-bs-ride="carousel">
+                                                        <div class="carousel-inner">
+
+                                                            <div class="carousel-item active">
+                                                                <img src="./images/Malhar-Suite-1.webp"
+                                                                    class="d-block w-100" alt="Image 1">
+                                                            </div>
+                                                            <div class="carousel-item">
+                                                                <img src="./images/Malhar-Suite-2.webp"
+                                                                    class="d-block w-100" alt="Image 2">
+                                                            </div>
+                                                            <div class="carousel-item">
+                                                                <img src="./images/Malhar-Suite-3.webp"
+                                                                    class="d-block w-100" alt="Image 3">
+                                                            </div>
+                                                            <div class="carousel-item">
+                                                                <img src="./images/Malhar-Suite-4.webp"
+                                                                    class="d-block w-100" alt="Image 4">
+                                                            </div>
+                                                        </div>
+                                                        <!-- Carousel Controls -->
+                                                        <button class="carousel-control-prev" type="button"
+                                                            data-bs-target="#mainImageSlider" data-bs-slide="prev">
+                                                            <span class="carousel-control-prev-icon"
+                                                                aria-hidden="true"></span>
+                                                            <span class="visually-hidden">Previous</span>
+                                                        </button>
+                                                        <button class="carousel-control-next" type="button"
+                                                            data-bs-target="#mainImageSlider" data-bs-slide="next">
+                                                            <span class="carousel-control-next-icon"
+                                                                aria-hidden="true"></span>
+                                                            <span class="visually-hidden">Next</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3">
+                                                <!-- Thumbnails -->
+                                                <div class="mx-auto">
+                                                    <div class="thumbnail-images">
+                                                        <div class="mb-2">
+                                                            <img src="./images/Malhar-Suite-1.webp"
+                                                                class="img-fluid active" alt="Thumbnail 1"
+                                                                onclick="setActiveSlide(0)">
+                                                        </div>
+                                                        <div class="mb-2">
+                                                            <img src="./images/Malhar-Suite-2.webp" class="img-fluid"
+                                                                alt="Thumbnail 2" onclick="setActiveSlide(1)">
+                                                        </div>
+                                                        <div class="mb-2">
+                                                            <img src="./images/Malhar-Suite-3.webp" class="img-fluid"
+                                                                alt="Thumbnail 3" onclick="setActiveSlide(2)">
+                                                        </div>
+                                                        <div class="mb-2">
+                                                            <img src="./images/Malhar-Suite-4.webp" class="img-fluid"
+                                                                alt="Thumbnail 4" onclick="setActiveSlide(3)">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3">
+
+                                    <div class="amenitiesSec">
+                                        <h6>Amenities</h6>
+                                        <div class="amenirtiesSec">
+                                            <div class="secOne">
+                                                <ul>
+                                                    <li>
+                                                        <img src="./images/amenities-1.svg"> AC
+                                                    </li>
+                                                    <li>
+                                                        <img src="./images/amenities-2.svg"> 2 Adults
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="secSec">
+                                                <ul>
+                                                    <li>
+                                                        <img src="./images/amenities-3.svg"> Wifi
+                                                    </li>
+                                                    <li>
+                                                        <img src="./images/amenities-04.svg"> Breakfast
+                                                    </li>
+                                                    <li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="secThrd">
+                                                <ul>
+                                                    <li>
+                                                        <img src="./images/amenities-5.svg"> Mini Fridge
+                                                    </li>
+                                                    <li>
+                                                        <img src="./images/amenities-6.svg"> Safety Locker
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="secFour">
+                                                <ul>
+                                                    <li>
+                                                        <img src="./images/amenities-7.svg"> Sofa Cum-Bed
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        </ul>
+                                    </div>
+
+                                    <div class="checkInDetails ">
+                                        <ul class="list-unstyled padRight-50">
+                                            <h6>Check In</h6>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-check">
+                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                </svg> Check-in: 13:00 PM</li>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-check">
+                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                </svg> Early check-in subject to availability</li>
+                                        </ul>
+                                        <ul class="list-unstyled">
+                                            <h6>Check-out</h6>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-check">
+                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                </svg> Check-out: 10:00 AM</li>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-check">
+                                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                                </svg> Express check-out</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <hr>
+                            <div class="instructionSec">
+                                <h6>Special check-in instructions</h6>
+                                <p>Five days prior to arrival, guests will receive an email containing check-in
+                                    instructions. Upon arrival, our front desk staff will warmly greet guests. For
+                                    further information, please refer to the details provided on the booking
+                                    confirmation.</p>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vertical Tabs Navigation -->
+            <div class="col-md-3">
+
+            </div>
+        </div>
+    </div>
+
+
+    <section id="FooterSection">
+        <div class="container pad-80">
+            <div class="row">
+                <div class="col-md-3 abtCompany" data-aos="fade-in" data-aos-duration="500">
+                    <img src="./images/Maratha-Empire.png">
+                    <div class="socialMedia">
+                        <ul>
+                            <li><img src="./images/facebook.png" class="SocialIcon"></li>
+                            <li><img src="./images/instagram.png" class="SocialIcon"></li>
+                            <li><img src="./images/twitter.png" class="SocialIcon"></li>
+                            <li><img src="./images/linkedin.png" class="SocialIcon"></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-2 footerOne" data-aos="fade-in" data-aos-duration="1000">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="rooms.html">Rooms</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="experience.html">Experience</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 footerTwo" data-aos="fade-in" data-aos-duration="1500">
+                    <h3>Contact Details</h3>
+                    <div class="contactDetails d-flex ">
+                        <img src="./images/map.png" class="SocialIcon">
+                        <div class="details">
+                            <p>Maratha Samrat, Jejuri, Pune -411021</p>
+                        </div>
+                    </div>
+
+                    <div class="contactDetails d-flex ">
+                        <img src="./images/phone.png" class="SocialIcon">
+                        <div class="details">
+                            <p>+91 9822 012 762</p>
+                        </div>
+                    </div>
+
+                    <div class="contactDetails d-flex ">
+                        <img src="./images/email.png" class="SocialIcon">
+                        <div class="details">
+                            <p>marathasamrat@gmail.com</p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="col-md-4 footerThree" data-aos="fade-in" data-aos-duration="2000">
+                    <h3>Visit Our Location</h3>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115069.14634302017!2d73.78056543154413!3d18.524598599502376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e1!3m2!1sen!2sin!4v1732174093463!5m2!1sen!2sin"
+                        width="100%" height="150" style="border:1px solid #ddd;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function setActiveSlide(index) {
+            const carousel = document.getElementById('mainImageSlider');
+            const carouselInstance = bootstrap.Carousel.getInstance(carousel) || new bootstrap.Carousel(carousel);
+            carouselInstance.to(index);
+
+            // Highlight active thumbnail
+            document.querySelectorAll('.thumbnail-images img').forEach((img, i) => {
+                img.classList.toggle('active', i === index);
+            });
+        }
+    </script>
+
+    <script src="./js/roomdetails.js"></script>
+    <script src="./js/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
